@@ -1,1 +1,1 @@
-select 4 as 'test4'
+select 4 as test4
