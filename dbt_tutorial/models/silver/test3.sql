@@ -1,1 +1,1 @@
-select 3 as 'test3'
+select 3 as "test3"
