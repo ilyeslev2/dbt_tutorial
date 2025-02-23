@@ -11,7 +11,7 @@
 {% macro generate_schema_name(custom_schema_name, node) -%}
 
     {%- set default_schema = target.schema -%}
-    {%- if env_var('DBT_ENV_SCHEMA') == 'Production' and custom_schema_name is not none -%}
+    {%- if target.name == 'prod' and custom_schema_name is not none -%}
 
         {{ custom_schema_name | trim }}
 
