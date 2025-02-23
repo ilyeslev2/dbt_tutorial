@@ -1,6 +1,6 @@
-{% macro generate_database_name() -%}
-
-    {%- if target.name == 'prod' -%}
+{% macro generate_database_name(custom_database_name=none, node=none) -%}
+    {%- set environment = target.name -%}
+    {%- if environment == 'prod' -%}
 
         PROD_{{ custom_database_name | trim }}
 
