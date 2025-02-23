@@ -1,9 +1,17 @@
 
 version: 2
 
+groups:
+  - name: consolidation
+    owner: 
+      name: consolidation team
+      email: consolidation@outlook.com
+
 models:
   - name: test1
     description: "A starter dbt model"
+    group: consolidation
+    access: public
     columns:
       - name: id
         description: "The primary key for this table"
@@ -13,6 +21,8 @@ models:
 
   - name: test2
     description: "A starter dbt model"
+    group: consolidation
+    access: private
     columns:
       - name: id
         description: "The primary key for this table"
