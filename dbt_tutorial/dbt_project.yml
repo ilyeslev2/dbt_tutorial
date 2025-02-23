@@ -33,7 +33,10 @@ models:
   dbt_tutorial:
     # Config indicated by + and applies to all files under models/example/
     silver:
+      +database: silver
       +materialized: view
+
     gold:
+      +database: gold
       +materialized: view
 
