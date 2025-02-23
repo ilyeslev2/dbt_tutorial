@@ -30,13 +30,23 @@ clean-targets:         # directories to be removed by `dbt clean`
 # directory as views. These settings can be overridden in the individual model
 # files using the `{{ config(...) }}` macro.
 models:
-  dbt_tutorial:
-    # Config indicated by + and applies to all files under models/example/
+  my_new_project:
+    # Applies to all files under models/silver/
     silver:
       +database: silver
-      +materialized: view
-
+      # Applies to all files under models/silver/salesforce/
+      salesforce:
+        +materialized: view
+        +schema: salesforce
+      # Applies to all files under models/silver/D365/
+      D365:
+        +materialized: view
+        +schema: D365
+    # Applies to all files under models/gold/
     gold:
       +database: gold
-      +materialized: view
+      # Applies to all files under models/gold/consolidation
+      consolidation:
+        +materialized: view
+        +schema: consolidation
 
