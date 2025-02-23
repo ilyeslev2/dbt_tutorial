@@ -38,12 +38,10 @@ models:
       salesforce:
         +materialized: view
         +schema: salesforce
-        +group: salesforce
       # Applies to all files under models/silver/D365/
       D365:
         +materialized: view
         +schema: D365
-        +group: D365
     # Applies to all files under models/gold/
     gold:
       +database: gold
