@@ -48,4 +48,4 @@ models:
       # Applies to all files under models/gold/consolidation
       consolidation:
         +materialized: view
-         +schema: consolidation
+        +schema: consolidation
